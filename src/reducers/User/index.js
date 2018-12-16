@@ -1,9 +1,9 @@
 import * as types from 'reducers/User/types/index';
-import {getToken, getUser} from 'utils/localStorage/index';
+import {getToken} from 'utils/localStorage/index';
 
 const INITIAL_STATE = {
 	isAuthenticated: getToken() != null,
-  user: getUser()
+	pageSignupWizard: 0
 }
 
 const userReducer = (state=INITIAL_STATE, action) => {
@@ -13,16 +13,11 @@ const userReducer = (state=INITIAL_STATE, action) => {
   			...state,
   			isAuthenticated: true
   		};
-  	case types.LOGOUT:
+  	case types.CHANGE_PAGE_SIGNUP_WIZARD:
   		return {
   			...state,
-  			isAuthenticated: false
+  			pageSignupWizard: action.page
   		};
-    case types.SET_USER:
-      return {
-        ...state,
-        user: action.user
-      };
     default: return state;
   }
 }

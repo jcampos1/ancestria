@@ -3,7 +3,7 @@ import i18n from 'i18n';
 import {saveLanguage} from 'utils/localStorage/index';
 import classNames from 'classnames';
 import { withNamespaces } from 'react-i18next';
-import './styles/language.scss';
+import './styles/language.css';
 
 class Language extends React.Component {
 	constructor (props) {
@@ -31,7 +31,7 @@ class Language extends React.Component {
 		return ( 
 			<div className="language">
 				<div className="language__img">
-					<img src="/images/ett-language.png" width="26" alt="language" />
+					<img src="/images/language-img.svg" width="26px" alt="language" />
 				</div>
 				<div className="language__title">
 					<label>{t('language.title')}</label>

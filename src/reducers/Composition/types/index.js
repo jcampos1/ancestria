@@ -1,1 +1,0 @@
-export const SET_CONTINENT = 'SET_CONTINENT';

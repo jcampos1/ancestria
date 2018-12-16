@@ -6,15 +6,9 @@ export const setAuthenticated = () => {
 	}
 }
 
-export const logout = () => {
+export const changeWizardPage = page => {
 	return {
-		type: types.LOGOUT
-	}
-}
-
-export const setUser = user => {
-	return {
-		type: types.SET_USER,
-		user
+		type: types.CHANGE_PAGE_SIGNUP_WIZARD,
+		page
 	}
 }
